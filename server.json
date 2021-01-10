@@ -1,7 +1,8 @@
 {
   "categories": [
     { "id": "camisetas", "title": "Camisetas" },
-    { "id": "calcas", "title": "Calças" }
+    { "id": "calcas", "title": "Calças" },
+    { "id": "meias", "title": "Meias" }
   ],
   "products": [
     {
