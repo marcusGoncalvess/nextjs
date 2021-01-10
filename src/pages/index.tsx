@@ -11,6 +11,10 @@ interface HomeProps {
 }
 
 export default function Home({ recommendedProducts }: HomeProps) {
+  // async function handleLib() {
+  //   const defaultValue = (await import('lib')).default;
+  //   const { notDefault } = (await import('lib')).default;
+  // }
   return (
     <div>
       <Title>Hello world</Title>
