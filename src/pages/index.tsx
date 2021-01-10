@@ -15,6 +15,8 @@ export default function Home({ recommendedProducts }: HomeProps) {
   //   const defaultValue = (await import('lib')).default;
   //   const { notDefault } = (await import('lib')).default;
   // }
+  console.log(process.env.NEXT_PUBLIC_API_URL);
+
   return (
     <div>
       <Title>Hello world</Title>
@@ -34,9 +36,10 @@ export default function Home({ recommendedProducts }: HomeProps) {
 }
 
 export const getServerSideProps: GetServerSideProps<HomeProps> = async () => {
-  const response = await fetch("http://localhost:3333/recommended");
+  const response = await fetch(
+    `${process.env.NEXT_PUBLIC_API_URL}/recommended`
+  );
   const recommendedProducts = await response.json();
-
   return {
     props: {
       recommendedProducts,
